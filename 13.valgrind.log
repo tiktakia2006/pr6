@@ -1,0 +1,39 @@
+==2589== Memcheck, a memory error detector
+==2589== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==2589== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==2589== Command: ./13
+==2589== Parent PID: 2588
+==2589== 
+==2589== 
+==2589== Process terminating with default action of signal 1 (SIGHUP)
+==2589==    at 0x497C572: write (write.c:26)
+==2589==    by 0x48F3974: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1181)
+==2589==    by 0x48F2570: new_do_write (fileops.c:449)
+==2589==    by 0x48F2570: _IO_do_write@@GLIBC_2.2.5 (fileops.c:426)
+==2589==    by 0x48F2EF2: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:784)
+==2589==    by 0x48F5678: _IO_default_xsputn (genops.c:399)
+==2589==    by 0x48F5678: _IO_default_xsputn (genops.c:370)
+==2589==    by 0x48F3AE9: _IO_new_file_xsputn (fileops.c:1265)
+==2589==    by 0x48F3AE9: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+==2589==    by 0x48C0CC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+==2589==    by 0x48C0CC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+==2589==    by 0x48CB742: __vfprintf_internal (vfprintf-internal.c:1545)
+==2589==    by 0x48C01B2: printf (printf.c:33)
+==2589==    by 0x10923F: run_valgrind_test (in /mnt/c/Users/Тарас/Desktop/practicesC/pr6/13)
+==2589==    by 0x1092AE: main (in /mnt/c/Users/Тарас/Desktop/practicesC/pr6/13)
+==2589== 
+==2589== HEAP SUMMARY:
+==2589==     in use at exit: 1,024 bytes in 1 blocks
+==2589==   total heap usage: 1 allocs, 0 frees, 1,024 bytes allocated
+==2589== 
+==2589== LEAK SUMMARY:
+==2589==    definitely lost: 0 bytes in 0 blocks
+==2589==    indirectly lost: 0 bytes in 0 blocks
+==2589==      possibly lost: 0 bytes in 0 blocks
+==2589==    still reachable: 1,024 bytes in 1 blocks
+==2589==         suppressed: 0 bytes in 0 blocks
+==2589== Reachable blocks (those to which a pointer was found) are not shown.
+==2589== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==2589== 
+==2589== For lists of detected and suppressed errors, rerun with: -s
+==2589== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
